@@ -131,3 +131,125 @@ public class LogFilter : ActionFilterAttribute
 }
 
 ```
+🔥 MOST IMPORTANT MCQ ONE-LINERS
+```
+[Authorize] → Login required
+
+[AllowAnonymous] → Public access
+
+Forms authentication → Cookie based
+
+CSRF protection → AntiForgeryToken
+
+XSS attack → Script injection
+
+XSS prevention → Encoding
+```
+## EF- Entity Framework
+1. EF = Object Relational Mapper (ORM)
+
+2. C# class ↔ Database table mapping
+
+3. SQL likhne ki zarurat kam
+
+#### EF ke Approaches
+1. code first :-
+```
+Flow (MCQ GOLD):
+
+1️⃣ Model class banao
+2️⃣ DbContext banao
+3️⃣ Migration add karo
+4️⃣ Database update karo
+```
+3. Database first
+4. model first
+
+❓ Pehle class phir DB?
+✅ Code First
+
+## DbContext
+
+```
+Database session represent karta hai
+
+Tables → DbSet<T>
+
+public DbSet<Student> Students { get; set; }
+```
+## Data Annotations
+```
+| Attribute      | Use           |
+| -------------- | ------------- |
+| `[Key]`        | Primary Key   |
+| `[Required]`   | Not Null      |
+| `[MaxLength]`  | Max size      |
+| `[ForeignKey]` | Foreign Key   |
+| `[NotMapped]`  | Ignore column |
+
+```
+## Fluent API (TRICKY MCQ)
+```
+Configuration using C# code
+
+Override OnModelCreating()
+
+modelBuilder.Entity<Student>()
+    .HasKey(s => s.Id);
+
+MCQ Direct
+
+❓ Data Annotation ka alternative?
+✅ Fluent API
+```
+## Database Migrations (VERY IMPORTANT)
+```
+DB schema changes track karta hai
+
+Version control for DB
+
+Commands (MCQ GOLD):
+
+Add-Migration Initial
+
+Update-Database
+```
+## CRUD Using EF
+```
+Create
+context.Students.Add(s);
+context.SaveChanges();
+
+Read
+context.Students.ToList();
+
+Update
+context.Students.Update(s);
+context.SaveChanges();
+
+Delete
+context.Students.Remove(s);
+context.SaveChanges();
+
+MCQ Trap
+
+SaveChanges() mandatory
+```
+🔥 MOST IMPORTANT MCQ ONE-LINERS
+```
+EF = ORM
+
+Code First → class first
+
+DbContext → DB session
+
+DbSet → Table
+
+[Key] → Primary Key
+
+Fluent API → full control
+
+Migration → DB versioning
+
+SaveChanges → commit
+```
